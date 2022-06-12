@@ -1,11 +1,15 @@
+import { Grid } from "antd"
 import { NextPage } from "next"
 import { HTMLAttributes } from "react"
-import { Header } from "../../components/Header"
 import styles from './styles.module.scss'
 
-export const HomePage: NextPage = (props: HTMLAttributes<HTMLDivElement>) => {
+const { useBreakpoint } = Grid
+
+const HomePage = (props: HTMLAttributes<HTMLDivElement>) => {
+
+  const breakpoints = useBreakpoint()
   return(
-    <div id={props.id} className={styles.homeContainer}>
+    <div id={props.id} className={!breakpoints.lg ? styles.mobile : styles.homeContainer}>
       <div className={styles.mainContainer}>
         <div className={styles.content}>
           <div className={styles.textContent}>
@@ -20,11 +24,10 @@ export const HomePage: NextPage = (props: HTMLAttributes<HTMLDivElement>) => {
               src="https://github.com/MuriloCC.png" 
             />
           </div>
-
-          <span className={styles.profession}>ADS</span>
-          <p className={styles.description}>FATEC Sorocaba</p>
         </div>
       </div>
     </div>
   )
 }
+
+export default HomePage

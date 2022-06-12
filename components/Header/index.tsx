@@ -1,23 +1,29 @@
 import styles from './styles.module.scss'
-import { GithubFilled, InstagramFilled, InstagramOutlined, LinkedinFilled } from '@ant-design/icons'
+import { GithubFilled, InstagramOutlined, LinkedinFilled } from '@ant-design/icons'
 import Link from 'next/link'
+import { Grid } from 'antd'
+
+const { useBreakpoint } = Grid
 
 export const Header = () => {
+  const breakPoints = useBreakpoint()
+
+
   return (
-    <header className={styles.container}>
-      <nav className={styles.navContainer}>
+    <header className={breakPoints.lg ? styles.container : styles.mobile}>
+      {breakPoints.lg && <nav className={styles.navContainer}>
         <li className={styles.navList}>
           <ul>
-            <a href='#about'>Sobre mim</a>
+            <a href='#home'>Home</a>
           </ul>
           <ul>
-            <Link href="/About">Sobre mim</Link>
+            <Link href="#about">Sobre mim</Link>
           </ul>
           <ul>
-            <Link href="/About">Sobre mim</Link>
+            <Link href="#stacks">Stacks</Link>
           </ul>
         </li>
-      </nav>
+      </nav> }
 
       <h1 className={styles.title}>Muras.<strong>code</strong></h1>
 

@@ -5,11 +5,12 @@ import styles from "./styles.module.scss"
 
 import animatedGuitarist from '../../assets/gutarist.json'
 import animatedDev from '../../assets/dev.json'
+import { Grid } from "antd";
+
+const {useBreakpoint} = Grid
 
 const About = (props: HTMLAttributes<HTMLDivElement>) => {
-  const [animationState, setAnimationState] = useState({
-    isStopped: false, isPaused: false
-  })
+  const breakpoints = useBreakpoint()
 
   const defaultOptionsMusician = {
     loop: true,
@@ -44,21 +45,20 @@ const About = (props: HTMLAttributes<HTMLDivElement>) => {
         </div>
       </div>
 
-      <div className={styles.animationContainer}>
-        <Lottie
-          style={{ marginTop: '-6rem' }} 
-          options={defaultOptionsMusician}
-          width={400}
-          height={400} 
-        />
-
+      {breakpoints.lg && <div className={styles.animationContainer}>
         <Lottie 
           options={defaultOptionsDev}
           width={300}
           height={300} 
         />
-      </div>
 
+        <Lottie
+          style={{ marginTop: '-1rem' }} 
+          options={defaultOptionsMusician}
+          width={400}
+          height={400} 
+        />
+      </div>}
     </div>
   )
 }
