@@ -1,9 +1,17 @@
 import type { NextPage } from 'next'
+import { Header } from '../components/Header'
+import About from './About'
 import { HomePage } from './HomePage'
+import Stacks from './Stacks'
 
 const Home: NextPage = () => {
   return (
-    <HomePage />
+    <>
+      <Header />
+      <HomePage />
+      <About id='about' />
+      <Stacks id='stacks' />
+    </>
   )
 }
 

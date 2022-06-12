@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #191919;
+  
+  h1, h2 {
+    color: #01D5A2;
+  }
+}
+
+.bioContainer {
+  width: 500px;
+
+  p {
+    color: #ffff;
+    font-size: 1.3em;
+    line-height: 1.7rem;
+  }
+}
+
+.animationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
