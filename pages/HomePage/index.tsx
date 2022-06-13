@@ -1,5 +1,6 @@
 import { Grid } from "antd"
 import { NextPage } from "next"
+import Image from "next/image"
 import { HTMLAttributes } from "react"
 import styles from './styles.module.scss'
 
@@ -19,9 +20,12 @@ const HomePage = (props: HTMLAttributes<HTMLDivElement>) => {
           </div>
           
           <div className={styles.imageContainer}>
-            <img 
+            <Image
+              width={200}
+              height={200}
               className={styles.image}
               src="https://github.com/MuriloCC.png" 
+              alt="Profile-photo"
             />
           </div>
         </div>

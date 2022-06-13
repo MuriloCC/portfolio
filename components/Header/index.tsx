@@ -30,21 +30,21 @@ export const Header = () => {
       <nav className={styles.navContainer}>
         <li className={styles.navListSocial}>
           <ul>
-            <a target="_blank" rel="noreferrer" href="www.linkedin.com/in/murilo-castilho-4b193b198/">
+            <a target="_blank" rel='noreferrer' href="https://linkedin.com/in/murilo-castilho-4b193b198/">
               <LinkedinFilled 
                 style={{ fontSize: 30 }}
               />
             </a>
             </ul>
           <ul>
-            <a href="#">
+            <a target="_blank" rel='noreferrer' href="https://www.github.com/MuriloCC">
               <GithubFilled 
                 style={{ fontSize: 30 }}
               />
             </a>
           </ul>
           <ul>
-            <a href="#">
+            <a target="_blank" rel='noreferrer' href="https://www.instagram.com/ehomuras_/">
               <InstagramOutlined style={{ fontSize: 30 }} />
             </a>
           </ul>

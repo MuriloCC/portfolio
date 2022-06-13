@@ -32,8 +32,8 @@ const About = (props: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div id={props.id} className={styles.container}>
       <div className={styles.textContent}>
-        <h1>Sobre mim</h1>
         <div className={styles.bioContainer}>
+          <h1>Sobre mim</h1>
           <p>Nascido e criado em Sorocaba, no interior de SP, sempre gostei de utilizar a tecnologia e as vantagens e beleza que ela trás para a vida.</p>
           <p>Hoje com 22 anos e cerca de 7 meses de experiencia, posso dizer que consigo viver daquilo que tanto me encanta:</p>
           <p>Construção completa de softwares modernos e performáticos e todo dia aprendendo cada vez mais.</p>
